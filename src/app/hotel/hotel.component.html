@@ -8,7 +8,9 @@
 
 <h2>Department List</h2>
 <ul class="list-inline">
-  <li (click)="onSelect(department)" *ngFor="let department of departments">
+  <li (click)="onSelect(department)"
+  [class.selected] = "isSelected(department)"
+  *ngFor="let department of departments">
     <span class="badge">
       {{department.id}}
     </span> {{department.name}}
