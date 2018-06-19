@@ -3,3 +3,14 @@
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
 </div>
+
+<h1>Optional Route Parameters</h1>
+
+<h2>Department List</h2>
+<ul class="list-inline">
+  <li (click)="onSelect(department)" *ngFor="let department of departments">
+    <span class="badge">
+      {{department.id}}
+    </span> {{department.name}}
+  </li>
+</ul>
