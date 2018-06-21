@@ -6,11 +6,19 @@
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
     navigation bar while scrolling!</p>
 
-  <ul class="list-group">
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let driver of drivers">
+      {{driver.name}}
+      </li>
+    </ul>
+
+
+  <!-- <ul class="list-group">
     <li class="list-group-item" *ngFor="let driver of drivers">
     {{driver.id}} {{driver.name}} {{driver.age}} 
     </li>
-  </ul>
+  </ul> -->
 
     <button (click)="onDelete()" class="btn btn-primary">
       Delete
