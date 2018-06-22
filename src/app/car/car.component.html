@@ -6,21 +6,21 @@
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
     navigation bar while scrolling!</p>
 
-
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let driver of drivers">
-      {{driver.name}}
-      </li>
-    </ul>
-
-
-  <!-- <ul class="list-group">
+  <ul class="list-group">
     <li class="list-group-item" *ngFor="let driver of drivers">
-    {{driver.id}} {{driver.name}} {{driver.age}} 
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="{{driver.ThumbNailUrl}}" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">{{driver.HotelId}} : {{driver.HotelName}}</h4>
+            <p class="card-text">{{driver.Address.Address}}</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
     </li>
-  </ul> -->
+  </ul>
 
-    <button (click)="onDelete()" class="btn btn-primary">
-      Delete
-    </button>
+  <br>
+  <button (click)="onDelete()" class="btn btn-primary">
+    Delete
+  </button>
 </div>

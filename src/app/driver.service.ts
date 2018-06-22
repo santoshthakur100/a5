@@ -7,12 +7,13 @@ import { tap, catchError } from 'rxjs/operators';
 @Injectable()
 export class DriverService {
 
-  private _url: string = 'https://jsonplaceholder.typicode.com/users';
+  private _url: string = '/assets/data/employees.json';
 
   constructor(private http:HttpClient) { }
 
   getDrivers (): Observable<IEmployee[]> {
     return this.http.get<IEmployee[]>(this._url);
+
     // return [
     //   {"id":1, "name":"Santosh", "age":"32"},
     //   {"id":2, "name":"Andrew", "age":"30"},

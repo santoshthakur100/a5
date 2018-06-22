@@ -21,6 +21,7 @@ export class CarComponent implements OnInit {
     this._driverService.getDrivers()
       .subscribe(data => this.drivers = data, error => this.errorMsg = error);
 
+
     // this.drivers = this._driverService.getDrivers();
   }
 
