@@ -1,4 +1,4 @@
-<div class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
+<div class="container-fluid bg-info" style="padding-top:20px;padding-bottom:20px">
   <h1>Attribute Vs Property</h1>
   <p>Attribute and Property are not same</p>
   <p>Attribute - HTML</p>
@@ -7,33 +7,34 @@
     Attribute values cannot changes once they are initialized
   </p>
   <p>Property values however can changes</p>
-
+</div>
   <hr>
-  <div>
-    <div>
-      <h2>What About {{name}}</h2>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-xs-12">
+      <h2>Property Binding - Enable - Disable {{name}}</h2>
       <input [id]='myId' type="text" value="Santosh" />
       <input [disabled]='isDisabled' id='{{myId}}' type="text" value="Santosh" />
       <input bind-disabled='isDisabled' id='{{myId}}' type="text" value="Santosh" />
 
-      <br>
-      <br>
-      <br>
-
-      <button (click)="btnClick($event)">Click to run function</button>
-      Button Text Visible here > {{btnText}} >>> Type {{btnTextType}}
-
-      <br>
-      <br>
-
-      <button (click)="greeting = 'Welcome Santosh ? Thakur : kumar11111  '">Click to run function</button>
-      {{greeting}}
     </div>
+    <div class="col-sm-4 col-xs-12">
+      <button (click)="btnClick($event)">Click to run function</button>
+      <br>
+      <br>
+      <div class="alert alert-success alert-dismissible fade show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Success!</strong>
+        <br> >>> {{btnText}} 
+        <br> >>> Type :  {{btnTextType}}
+      </div>
 
-    <br>
-    <br>
-    <br>
-    <div>
+      
+
+    </div>
+    <div class="col-sm-4 col-xs-12">
+
       <h2>If Statement</h2>
 
       <button (click)="showValue()">Show Value</button>
@@ -47,17 +48,23 @@
         <div>Hiddem</div>
       </ng-template>
 
+    </div>
+  </div>
+</div>
 
-       
+<hr>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <button (click)="greeting = 'Welcome Santosh ? Thakur : kumar11111  '">Click to run function</button>
+      {{greeting}}
 
     </div>
-
-    <div>
-      <h2>ngFor</h2>
-
-      <div *ngFor="let i of [1,2,3,4,5]"> Number {{i}} </div>
+    <div class="col-sm-6">
+        <h2>ngFor</h2>
+        <span *ngFor="let i of [1,2,3,4,5]"> Number {{i}} </span>
     </div>
-
-
   </div>
 </div>
