@@ -1,48 +1,74 @@
-<div class="container-fluid bg-success" style="padding-top:70px;padding-bottom:70px">
-  <h1>Welcome Flight Section</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+<div class="container-fluid bg-success" style="padding-top:20px;padding-bottom:20px">
+  <h1 style="color:white">Flight : Section</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation
+    bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation
+    bar while scrolling!</p>
 </div>
+<hr>
 
-<div id="accordion">
+<div class="container-fluid">
+  <div class="row">
 
-  <div class="card">
-    <div class="card-header">
-      <a class="card-link" data-toggle="collapse" href="#collapseOne">
-        Collapsible Group Item #1
-      </a>
+    <div class="col-sm-6">
+        <h2>Accordian In Jquery</h2>
+        <p>Type something in the input field to search the list for specific items:</p>
+      <div id="accordion">
+
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+              Collapsible Group Item #1
+            </a>
+          </div>
+          <div id="collapseOne" class="collapse show" data-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum..
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+              Collapsible Group Item #2
+            </a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum..
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+              Collapsible Group Item #3
+            </a>
+          </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Lorem ipsum..
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="collapseOne" class="collapse show" data-parent="#accordion">
-      <div class="card-body">
-        Lorem ipsum..
+    <div class="col-sm-6">
+      <div class="container mt-3">
+        <h2>Filterable List</h2>
+        <p>Type something in the input field to search the list for specific items:</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <ul class="list-group" id="myList">
+          <li class="list-group-item">First item</li>
+          <li class="list-group-item">Second item</li>
+          <li class="list-group-item">Third item</li>
+          <li class="list-group-item">Fourth</li>
+        </ul>
       </div>
     </div>
   </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Collapsible Group Item #2
-      </a>
-    </div>
-    <div id="collapseTwo" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Lorem ipsum..
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
-      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-        Collapsible Group Item #3
-      </a>
-    </div>
-    <div id="collapseThree" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-        Lorem ipsum..
-      </div>
-    </div>
-  </div>
-
 </div>
+<hr>
