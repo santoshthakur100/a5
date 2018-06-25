@@ -1,26 +1,47 @@
 <div class="container-fluid bg-warning" style="padding-top:20px;padding-bottom:20px">
-  <h1 textContent="{{name}} {{price | currency:'$'}}"></h1>
-  <!-- {{name}} -->
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-    navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-    navigation bar while scrolling!</p>
+<h1 textContent="{{name}} {{price | currency:'$'}}"></h1>
+<!-- {{name}} -->
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
+  navigation bar while scrolling!</p>
+<p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
+  navigation bar while scrolling!</p>
 </div>
 
-  <ul class="list-group">
-    <li class="list-group-item" *ngFor="let driver of drivers">
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="{{driver.ThumbNailUrl}}" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">{{driver.HotelId}} : {{driver.HotelName}}</h4>
-            <p class="card-text">{{driver.Address.Address}}</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
-          </div>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let driver of drivers | slice:1:count">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{driver.ThumbNailUrl}}" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">{{driver.HotelId}} : {{driver.HotelName}}</h4>
+          <p class="card-text">{{driver.Address.Address}}</p>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModalX" (click)="onSelect(driver)">See Details</a>
         </div>
-    </li>
-  </ul>
+      </div>
+  </li>
+</ul>
 
-  <br>
-  <button (click)="onDelete()" class="btn btn-primary">
-    Delete
-  </button>
+<div id="myModalX" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content" *ngIf="selectedHero">
+        <div class="modal-header">
+          <h4 class="modal-title">{{ selectedHero.HotelName }}</h4>
+        </div>
+        <div class="modal-body">
+            <img class="card-img-top" src="{{selectedHero.ThumbNailUrl}}" alt="Card image" style="width:100%">
+            <p><span>id: </span> {{selectedHero.HotelId}}</p>
+            <p><span>id: </span> {{selectedHero.Address.CompleteAddress}}</p>
+            <p>{{selectedHero.Description}}</p>
+        </div> 
+        <div class="modal-footer"> 
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+
+<button class="btn btn-primary" (click)="showMoreResult(driver)">
+  Show more
+</button>

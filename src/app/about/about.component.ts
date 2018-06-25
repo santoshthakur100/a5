@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IEmployee2 } from '../epmloyee';
+import { Employees } from '../mock-employee';
 
 @Component({
   selector: 'app-about',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
+  public count = 2;
 
   public name = 'Testing of Angular 5';
   public myId = 'testID';
@@ -15,6 +19,9 @@ export class AboutComponent implements OnInit {
   public btnTextType = '';
 
   public displanValue = false;
+
+  employees = Employees;
+  selectedHero: IEmployee2;
 
   constructor() { }
 
@@ -38,6 +45,14 @@ export class AboutComponent implements OnInit {
 
 
   ngOnInit() {
+  }
+
+  onSelect(employee: IEmployee2): void {
+    this.selectedHero = employee; 
+  }
+
+  showMore(){
+    this.count += 2;
   }
 
 }
